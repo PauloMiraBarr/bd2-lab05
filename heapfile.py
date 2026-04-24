@@ -14,6 +14,7 @@ def export_to_heap(csv_path: str, heap_path: str, record_format: str, page_size:
          open(heap_path, "wb") as heap_file:
 
         reader = csv.reader(csv_file, delimiter="\t")
+        next(reader)
 
         # si tu CSV tiene header, descomenta esto:
         # next(reader)
